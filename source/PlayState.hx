@@ -73,7 +73,7 @@ import sys.io.File;
 #end
 
 #if VIDEOS_ALLOWED
-import.flixel.FlxVideo
+import flixel.FlxVideo
 #end
 
 using StringTools;
