@@ -1620,12 +1620,9 @@ class PlayState extends MusicBeatState
 
 		var video: FlxVideo = new FlxVideo();
 		
+		video.onEndReached.add(video.dispose);
+		
 		video.play(filepath);
-		video.onEndReached.add(function(){
-			video.dispose();
-			startAndEnd();
-			return;
-		});
 		#else
 		FlxG.log.warn('Platform not supported!');
 		startAndEnd();
